@@ -1,0 +1,24 @@
+[workspace]
+members = [
+    "xtask",
+]
+
+[package]
+name = "just_ir_loader"
+version = "0.1.0"
+edition = "2024"
+authors = ["Aleksandr Miloserdov"]
+
+[dependencies]
+fft-convolver = { git = "https://github.com/almilos/fft-convolver.git" }
+#fft-convolver = "0.2.0"
+nih_plug_egui = { git = "https://github.com/robbert-vdh/nih-plug.git" }
+nih_plug = { git = "https://github.com/robbert-vdh/nih-plug.git", features = ["assert_process_allocs"] }
+hound = "3.5.1"
+egui-file-dialog = "0.12.0"
+tinyfiledialogs = "3.9.1"
+rubato = "0.16.2"
+thiserror = "2.0.17"
+
+[lib]
+crate-type = ["cdylib"]
